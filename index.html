@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes:ital,wght@0,400;1,400" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <header id="top">
+      <nav>
+        <ul>
+          <li>
+            <a href="#about-dr-raczko">About me</a>
+          </li>
+          
+          <li>
+            <a href="#hormone-replacement">Hormone Replacement</a>
+          </li>
+
+          <li>
+            <a href="#other">Additional Services</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      
+      <hgroup>
+        <h1>Dr Klaudia Raczko</h1>
+        <h2>MD DipMH DipNutrMed AFMCP</h2>
+      </hgroup>
+
+      <section id="about">
+        <img src="images/image02.jpg" />
+        <div>
+          <p>A London based doctor specialising in Hormone Replacement therapy, and health optimisation</p>
+          <a class="button book" href="https://www.example.com">Book an appointment</a>
+          <a class="next" href="#about-dr-raczko"><span>About Dr Raczko</span></a>
+        </div>
+      </section>
+
+      <section id="featured">
+        <div>
+          <h3>Featured in</h3>
+          <ul>
+            <li>
+              <a href="https://www.telegraph.co.uk/">The Telegraph</a>
+              <img src="images/telegraph.svg" alt="The Telegraph Logo" />
+            </li>
+            <li><a href="https://www.countryandtownhouse.com/">Country and Town House</a>
+              <img src="images/countryandtownhouse.svg" alt="Country and Town House Logo" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about-dr-raczko">
+        <img src="images/image07.jpg" />
+
+        <div>
+          <h3>About Me</h3>
+          <p>Dr Klaudia Raczko is a London based doctor with a special interest in Hormone Replacement Therapy (HRT) and health optimisation. With qualifications in Medicine, Mental Health, and Nutritional Medicine, she is dedicated to helping patients achieve their best health.</p>
+          <p>Dr Raczko is a member of the British Menopause Society and the British Society of Lifestyle Medicine, ensuring she stays at the forefront of medical advancements in her field.</p>
+          <p>She is passionate about empowering patients to take control of their health through personalised care and evidence-based treatments.</p>       
+          <a class="button book" href="https://www.example.com">Book an appointment</a>
+          <a class="next" href="#hormone-replacement"><span>Hormone Replacement</span></a>
+        </div>
+      </section>
+
+      <section id="hormone-replacement">
+        <img src="images/image01.jpg" />
+
+        <div>
+          <h3>Hormone Replacement Therapy</h3>
+          <p>Dr Raczko offers comprehensive Hormone Replacement Therapy (HRT) services, tailored to meet the individual needs of her patients. HRT can help alleviate symptoms associated with hormonal imbalances, particularly during menopause.</p>
+          <p>With a focus on personalised care, Dr Raczko works closely with each patient to develop a treatment plan that is safe, effective, and aligned with their health goals.</p>
+          <p>For more information or to book a consultation, please visit the <a href="https://www.example.com">Hormone Replacement page</a>.</p>
+          <a class="button book" href="https://www.example.com">Book an appointment</a>
+          <a class="next" href="#other"><span>Other Services</span></a>
+        </div>
+      </section>
+
+      <section id="other">
+        <img src="images/image03.jpg" />
+        <div>
+          <h3>Other areas I can support with</h3>
+          <ul>
+            <li>Menopause management</li>
+            <li>Weight management</li>
+            <li>Gut health</li>
+            <li>Stress management</li>
+            <li>Sleep optimisation</li>
+            <li>General health optimisation</li>
+            <li>Nutrition and lifestyle advice</li>
+          </ul>
+          <a class="button book" href="https://www.example.com">Book an appointment</a>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Dr Klaudia Raczko. All rights reserved.</p>
+        <p>Website by <a href="https://www.example.com">Your Company</a></p>
+        <p>Follow me on <a href="https://www.example.com">Social Media</a></p>
+      </footer>
+
+    </main>
+
+    <a class="back-to-top" href="#top" title="Back to Top"><img src="images/arrow-down.svg" /></a>
+
+
+  <script>
+    // Smooth scroll function
+    function smoothScrollTo(target, duration = 800) {
+      const targetElement = document.querySelector(target);
+      if (!targetElement) return;
+      
+      const targetPosition = targetElement.offsetTop;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      let startTime = null;
+      
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+      
+      // Easing function for smooth animation
+      function easeInOutQuad(timeElapsed, startValue, changeInValue, duration) {
+        timeElapsed /= duration / 2;
+        if (timeElapsed < 1) return changeInValue / 2 * timeElapsed * timeElapsed + startValue;
+        timeElapsed--;
+        return -changeInValue / 2 * (timeElapsed * (timeElapsed - 2) - 1) + startValue;
+      }
+      
+      requestAnimationFrame(animation);
+    }
+    
+    // Add event listeners to all anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('a[href^="#"]');
+      
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = this.getAttribute('href');
+          
+          // Update URL without jumping
+          history.pushState(null, null, target);
+          
+          // Smooth scroll to target
+          smoothScrollTo(target);
+        });
+      });
+    });
+
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 30) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+  </script>
+</html>
