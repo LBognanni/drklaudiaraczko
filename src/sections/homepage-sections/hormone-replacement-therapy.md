@@ -5,8 +5,7 @@ title: Hormone Replacement Therapy
 image: images/image01.jpg
 ---
 
-Dr Raczko offers comprehensive Hormone Replacement Therapy (HRT) services, tailored to meet the individual needs of her patients. HRT can help alleviate symptoms associated with hormonal imbalances, particularly during menopause.
+**Hormone replacement therapy** can transform lives by alleviating frustrating symptoms like hot flashes, mood swings, fatigue, and low libido, while boosting energy, focus, and overall vitality. It goes beyond symptom relief, supporting long-term health by reducing risks like osteoporosis and cardiovascular issues. For anyone looking to reclaim their quality of life, hormone therapy is a game-changer, offering renewed balance and vitality.
 
-With a focus on personalised care, Dr Raczko works closely with each patient to develop a treatment plan that is safe, effective, and aligned with their health goals.
+**Bioidentical hormones** take this to the next level. Designed to match the body’s natural hormones exactly, they deliver effective results with fewer side effects than synthetic options. Tailored to individual needs, they offer a customized, natural solution to hormonal imbalance. With bioidentical hormones, patients often feel like the best version of themselves—energized, confident, and ready to thrive.
 
-For more information or to book a consultation, please visit the Hormone Replacement page.

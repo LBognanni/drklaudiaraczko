@@ -5,10 +5,11 @@ title: Other Areas I can support with
 image: images/image03.jpg
 ---
 
- - Menopause management
- - Weight management
- - Gut health
- - Stress management
- - Sleep optimisation
- - General health optimisation
- - Nutrition and lifestyle advice
+ - Health Screening and Optimisation
+ - Cardiometabolic Health
+ - Brain Health Optimisation
+ - Comprehensive Thyroid Assessment
+ - Autoimmune Conditions and Chronic Unresolved Symptoms (e.g., fatigue)
+ - Mould Illness, and Histamine Intolerance
+ - Coordinating Complex Cases
+ - IV Drips and Intramuscular Injections

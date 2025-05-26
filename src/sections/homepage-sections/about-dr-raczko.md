@@ -5,9 +5,10 @@ title: About Me
 image: images/image07.jpg
 ---
 
-Dr Klaudia Raczko is a London based doctor with a special interest in Hormone Replacement Therapy (HRT) and health optimisation. With qualifications in Medicine, Mental Health, and Nutritional Medicine, she is dedicated to helping patients achieve their best health.
+I am a medical doctor with over a decade of experience in both the NHS and private sectors.
 
-Dr Raczko is a member of the British Menopause Society and the British Society of Lifestyle Medicine, ensuring she stays at the forefront of medical advancements in her field.
+My passion lies in health, wellbeing, and personalised medicine. I have undertaken extensive training in areas such as functional medicine, hormonal health, cardiometabolic health and health optimisation.
 
-She is passionate about empowering patients to take control of their health through personalised care and evidence-based treatments.
+I take pride in dedicating ample time to understand each patient's unique story so that together, we can develop a tailored plan you feel confident and comfortable with.
 
+I listen, support, and guide you through every step of your health journey. I collaborate with trusted professionals and coordinate complex cases so that we can address all your needs
