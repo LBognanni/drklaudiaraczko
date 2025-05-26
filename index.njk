@@ -1,0 +1,64 @@
+---
+layout: base.njk
+title: Dr Klaudia Raczko - Functional Medicine Practitioner 
+image: /images/image02.jpg
+description: "Dr Klaudia Raczko is a London based doctor specialising in Hormone Replacement therapy, and health optimisation. With qualifications in Medicine, Mental Health, and Nutritional Medicine, she is dedicated to helping patients achieve their best health."
+keywords: "HRT, Hormone Replacement Therapy, Functional Medicine, Health Optimisation, Dr Klaudia Raczko, London Doctor, Hormone Health London, London HRT, Bioidentical Hormone Therapy, menopause, menopause treatment London, hormone health, hormone therapy, hormone optimisation, health optimisation, functional medicine practitioner, functional medicine London, Dr Klaudia Raczko, Dr Raczko, Klaudia Raczko, Dr Klaudia, Klaudia, hormone replacement therapy London, HRT London, hormone replacement therapy UK, HRT UK"
+favicon: /images/favicon.png
+---
+
+{% set sectionsArray = collections.pageSections %}
+
+<header id="top">
+  <nav>
+    <ul>
+{% for section in sectionsArray %}
+  {% if section.data.headerLink %}
+    <li>
+      <a href="#{{ section.fileSlug }}">{{ section.data.title }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <hgroup>
+    <h1>Dr Klaudia Raczko</h1>
+    <h2>MD DipMH DipNutrMed AFMCP</h2>
+  </hgroup>
+
+
+{% for section in sectionsArray %}
+  {% set currentIndex = loop.index0 %}
+  {% set nextSection = sectionsArray[currentIndex + 1] %}
+  {% if nextSection.fileSlug == 'featured' %}
+    {% set nextSection = sectionsArray[currentIndex + 2] %}
+  {% endif %}
+
+  
+  <section id="{{ section.fileSlug }}">
+
+    {% if section.data.image %}
+      <img src="{{ section.data.image }}" alt="{{ section.data.title }}" />
+    {% endif %}
+    
+    <div>
+      <h3>{{ section.data.title }}</h3>
+      {{ section.content | safe }}
+
+      {% if section.fileSlug != 'featured' %}
+        <a class="button book" href="{{ site.bookingUrl }}">Book an appointment</a>
+      
+        {% if nextSection %}
+        <a href="#{{ nextSection.fileSlug }}" class="next">
+          <span>{{ nextSection.data.title }}</span>
+        </a>
+        {% endif %}
+      {% endif %}
+    </div>
+  </section>
+{% endfor %}
+
+</main>
