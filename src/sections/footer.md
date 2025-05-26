@@ -1,0 +1,5 @@
+- ![General Medical Council](/images/gmc.jpg "Member of the General Medical Council")
+- ![The Institute of Functional Medicine](/images/ifm.png "Member of the Institute of Functional Medicine")
+- ![AFMCP Graduate 2018](/images/afmcp-graduate-2018.jpg "AFMCP Graduate 2018")
+- ![University of Surrey](/images/surrey.png "University of Surrey Graduate")
+- ![Queen's University Belfast](/images/qub.png "Queen's University Belfast Graduate")

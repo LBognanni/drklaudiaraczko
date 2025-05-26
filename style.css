@@ -55,19 +55,22 @@ h6 {
   isolation: isolate;
 }
 
-*,
-html,
-body {
-  scroll-behavior: smooth !important;
-  scroll-snap-type: y mandatory;
+/* Actual css */
+@property --half-scrollbar-size {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
 }
 
-/* Actual css */
 html,
 body {
   background-color: #fcf9f8;
   font-family: "Work Sans", sans-serif;
   font-size: 18px;
+  container-type: inline-size;
+}
+body {
+  --half-scrollbar-size: calc(50vw - 50cqw);
 }
 
 a {
@@ -125,9 +128,12 @@ main {
   margin-inline: auto;
   display: flex;
   flex-direction: column;
+  container-type: size;
   gap: 4rem;
   padding-inline: 2rem;
   animation: popIn 1s ease-out forwards;
+
+  container-type: inline-size;
 
   a.button {
     margin-block: 1rem;
@@ -388,7 +394,12 @@ main {
   transition: all 0.3s;
 
   img {
-    transform: scaleY(-1) scale(0.5);
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    transform: scaleY(-1);
   }
 }
 
@@ -401,4 +412,36 @@ main {
   transform: scale(1.2);
   opacity: 1;
   background: white;
+}
+
+main footer {
+  background-color: #333;
+  padding-block: 2rem;
+  --padding: calc(50vw - var(--half-scrollbar-size) - 50cqw);
+  --margin: calc(var(--padding) * -1);
+
+  margin-inline: var(--margin);
+  padding-inline: var(--padding);
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding-inline: 0;
+    
+    li {
+      padding: 0;
+      align-self: stretch;
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 1ex;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+      align-content: center;
+    }
+  }
+
 }

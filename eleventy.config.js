@@ -1,14 +1,23 @@
+import { RenderPlugin } from "@11ty/eleventy";
+
 export default async function(eleventyConfig) {
+
+  eleventyConfig.addPlugin(RenderPlugin, {
+		tagName: "renderTemplate", // Change the renderTemplate shortcode name
+		tagNameFile: "renderFile", // Change the renderFile shortcode name
+		filterName: "renderContent", // Change the renderContent filter name
+	});
+
 	// Configure Eleventy
   eleventyConfig.addCollection("pageSections", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/homepage-sections/*.md")
+    return collectionApi.getFilteredByGlob("src/sections/homepage-sections/*.md")
       .sort((a, b) => a.data.order - b.data.order);
   });
   
   // Pass through files
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("assets/js");
-  eleventyConfig.addPassthroughCopy("assets/css/*.css");
+  eleventyConfig.addPassthroughCopy("*.css");
   eleventyConfig.addPassthroughCopy("{,!(_site)!(_site2)/**/}*.png");
   eleventyConfig.addPassthroughCopy("*.png");
   eleventyConfig.addPassthroughCopy("*.jpg");
@@ -58,5 +67,12 @@ export default async function(eleventyConfig) {
       return DateTime.fromJSDate(dateObj).toFormat('cccc, LLLL d, yyyy');
     }
   });
+
+  return {
+    dir: {
+      input: "src",
+      output: "_site"
+    }
+  };
 
 };
