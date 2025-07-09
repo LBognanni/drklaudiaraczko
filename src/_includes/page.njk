@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+<header id="top">
+  <nav>
+    <ul>
+    <li>
+      <a href="/">&laquo; Back</a>
+    </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <hgroup>
+    <h1>Dr Klaudia Raczko</h1>
+    <h2>MD DipMH DipNutrMed AFMCP</h2>
+  </hgroup>
+
+  <article>
+    {{ content | safe }}
+  </article>
+
+  <footer>
+  {% renderFile "src/sections/footer.md" %}
+  </footer>
+
+</main>
