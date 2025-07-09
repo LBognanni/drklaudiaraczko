@@ -176,7 +176,7 @@ main {
     border-radius: 2rem;
     justify-content: center;
     align-items: center;
-    background-image: url(images/arrow-down.svg);
+    background-image: url(/images/arrow-down.svg);
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: center;
@@ -444,4 +444,43 @@ main footer {
     }
   }
 
+}
+
+
+article {
+
+  th, h1, h2,h3,h4 {
+    color: #5f585a;
+  }
+
+  h1, h2 {
+    font-family: "helvetica", sans-serif;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  table {
+    min-width: calc(min(500px, 100%));
+    th:first-child {
+      text-align: left;
+    }
+    tr td {
+      border-bottom: 1px dotted #706669;
+      margin-bottom: 0.5rem;
+      font-size: 1.124rem;
+    }
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    margin-top: 2rem;
+  }
+
+  p {
+    margin-block: 0.5rem;
+  }
+  margin-bottom: 4rem;
 }
